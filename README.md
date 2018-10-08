@@ -1,1 +1,1 @@
-# CIFAR10 Loade written in C++
+# CIFAR10 Loader written in C++
