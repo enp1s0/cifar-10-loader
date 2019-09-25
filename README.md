@@ -1,4 +1,4 @@
-# CIFAR-10 Loader written in C++
+# CIFAR-10 Loader for C++
 
 ## Requirement
 
