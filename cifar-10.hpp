@@ -6,13 +6,12 @@
 #include <tuple>
 #include <stdexcept>
 
-namespace{
 namespace mtk{
 constexpr std::size_t CIFAR_10_DIM = 32;
 using label_t = int;
 using image_t = std::vector<unsigned int>;
 using sample_t = std::tuple<image_t, label_t>;
-std::vector<sample_t> load_cifar_10(const std::string& filename) {
+inline std::vector<sample_t> load_cifar_10(const std::string& filename) {
 	std::ifstream ifs(filename);
 	if(!ifs){
 		throw std::runtime_error("No such file : " + filename);
@@ -53,7 +52,6 @@ std::vector<sample_t> load_cifar_10(const std::string& filename) {
 		samples.push_back(std::make_tuple(image, label));
 	}
 	return samples;
-}
 }
 }
 
